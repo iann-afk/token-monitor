@@ -455,7 +455,7 @@
         const issueTitle = encodeURIComponent('[Bug] Token Monitor v' + ver + ' — ' + new Date().toISOString().slice(0, 10));
         const issueBody  = encodeURIComponent('**Paste your diagnostic report below** (already copied to clipboard):\n\n```\n\n```\n\n**Steps to reproduce:**\n\n**Expected behaviour:**\n\n**Actual behaviour:**\n');
         chrome.tabs.create({
-          url: 'https://github.com/token-monitor/token-monitor/issues/new?title=' + issueTitle + '&body=' + issueBody,
+          url: 'https://github.com/iann-afk/token-monitor/issues/new?title=' + issueTitle + '&body=' + issueBody,
         });
 
         // Step 3 — done
