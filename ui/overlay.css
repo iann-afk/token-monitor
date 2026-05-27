@@ -1,0 +1,236 @@
+/* overlay.css — all in-page widget styles. Scoped via tm- prefix. */
+
+:root {
+  --tm-bg: #ffffff;
+  --tm-bg-2: #f6f7f9;
+  --tm-text: #15171a;
+  --tm-text-2: #5b6068;
+  --tm-text-3: #9098a3;
+  --tm-border: #e4e6eb;
+  --tm-green: #16a34a;
+  --tm-amber: #f59e0b;
+  --tm-red: #ef4444;
+  --tm-info: #2563eb;
+  --tm-amber-bg: #fef3c7;
+  --tm-amber-border: #fcd34d;
+  --tm-amber-text: #92400e;
+  --tm-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --tm-radius: 10px;
+  --tm-radius-sm: 6px;
+  --tm-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tm-bg: #1a1d22;
+    --tm-bg-2: #23272d;
+    --tm-text: #e8eaed;
+    --tm-text-2: #a8b0bc;
+    --tm-text-3: #6b7280;
+    --tm-border: #2e333a;
+    --tm-amber-bg: #3b2f12;
+    --tm-amber-border: #735312;
+    --tm-amber-text: #fcd34d;
+    --tm-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+}
+
+/* ── Overlay (floating widget) ───────────────────────────────────────── */
+
+.tm-overlay {
+  position: fixed;
+  z-index: 2147483000;
+  width: 244px;
+  background: var(--tm-bg);
+  border: 1px solid var(--tm-border);
+  border-radius: var(--tm-radius);
+  box-shadow: var(--tm-shadow);
+  font-family: var(--tm-font);
+  font-size: 12px;
+  color: var(--tm-text);
+  user-select: none;
+  overflow: hidden;
+}
+
+.tm-overlay-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--tm-border);
+  cursor: move;
+  background: var(--tm-bg);
+}
+
+.tm-grip { color: var(--tm-text-3); font-size: 10px; }
+.tm-title { font-weight: 500; flex: 1; }
+.tm-plan {
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--tm-amber-bg);
+  color: var(--tm-amber-text);
+  font-weight: 500;
+}
+.tm-icon-btn {
+  background: transparent;
+  border: none;
+  color: var(--tm-text-3);
+  font-size: 14px;
+  line-height: 1;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tm-icon-btn:hover { background: var(--tm-bg-2); color: var(--tm-text); }
+
+.tm-overlay-body { padding: 8px 10px; }
+
+.tm-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.tm-bar-row:last-child { margin-bottom: 0; }
+.tm-bar-label { font-size: 11px; color: var(--tm-text-2); width: 56px; }
+.tm-bar-track {
+  flex: 1; height: 4px;
+  background: var(--tm-bg-2);
+  border-radius: 999px; overflow: hidden;
+}
+.tm-bar-fill { height: 100%; border-radius: 999px; transition: width 0.3s ease; }
+.tm-bar-pct { font-size: 11px; font-weight: 500; width: 32px; text-align: right; }
+
+.tm-status-line {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--tm-border);
+  font-size: 11px;
+  color: var(--tm-amber-text);
+  line-height: 1.4;
+}
+
+.tm-overlay-collapsed {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.tm-mini-pct { font-weight: 600; font-size: 13px; }
+.tm-mini-label { color: var(--tm-text-2); font-size: 11px; }
+
+/* ── Output size pill ─────────────────────────────────────────────────── */
+
+.tm-output-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--tm-font);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin: 4px 6px;
+  pointer-events: auto;
+  cursor: help;
+}
+.tm-output-pill-ok { background: var(--tm-bg-2); color: var(--tm-text-2); }
+.tm-output-pill-warn {
+  background: var(--tm-amber-bg);
+  color: var(--tm-amber-text);
+  border: 1px solid var(--tm-amber-border);
+}
+.tm-pill-icon { font-size: 10px; }
+
+/* ── Truncation banner ────────────────────────────────────────────────── */
+
+.tm-truncate-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  background: var(--tm-amber-bg);
+  border: 1px solid var(--tm-amber-border);
+  border-radius: var(--tm-radius-sm);
+  font-family: var(--tm-font);
+  color: var(--tm-amber-text);
+}
+.tm-truncate-icon { font-size: 16px; }
+.tm-truncate-text { flex: 1; }
+.tm-truncate-title { font-weight: 600; font-size: 12px; margin-bottom: 3px; }
+.tm-truncate-body { font-size: 11px; line-height: 1.4; margin-bottom: 8px; }
+.tm-truncate-actions { display: flex; gap: 6px; }
+.tm-btn-primary, .tm-btn-ghost {
+  font-family: var(--tm-font);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: var(--tm-radius-sm);
+  cursor: pointer;
+}
+.tm-btn-primary {
+  background: var(--tm-bg);
+  color: var(--tm-amber-text);
+  border: 1px solid var(--tm-amber-border);
+}
+.tm-btn-ghost {
+  background: transparent;
+  color: var(--tm-amber-text);
+  border: 1px solid transparent;
+}
+.tm-btn-ghost:hover { background: rgba(0,0,0,0.05); }
+.tm-truncate-close {
+  background: transparent;
+  border: none;
+  color: var(--tm-amber-text);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+/* ── Per-turn badge ───────────────────────────────────────────────────── */
+
+.tm-turn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--tm-font);
+  font-size: 10px;
+  color: var(--tm-text-3);
+  padding: 2px 0;
+  margin: 2px 8px;
+}
+.tm-turn-icon { font-size: 9px; }
+.tm-turn-trend {
+  color: var(--tm-amber-text);
+  margin-left: 4px;
+}
+
+/* ── Stream bar ───────────────────────────────────────────────────────── */
+
+.tm-stream-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  margin: 6px 0;
+  background: var(--tm-bg-2);
+  border-radius: var(--tm-radius-sm);
+  font-family: var(--tm-font);
+  font-size: 11px;
+  color: var(--tm-text-2);
+  transition: background-color 0.2s ease;
+}
+.tm-stream-bar-streaming {
+  background: rgba(22, 163, 74, 0.08);
+}
+.tm-stream-bar-idle {
+  background: var(--tm-bg-2);
+}
+.tm-stream-spin { animation: tm-spin 1s linear infinite; font-size: 12px; color: var(--tm-green); }
+.tm-stream-icon-static { font-size: 10px; color: var(--tm-text-3); opacity: 0.7; }
+.tm-stream-text { font-weight: 500; color: var(--tm-text); }
+.tm-stream-hint { color: var(--tm-text-3); margin-left: auto; }
+
+@keyframes tm-spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }

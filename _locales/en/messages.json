@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Token Monitor — AI Context Tracker",
+    "description": "Extension name shown in the Chrome Web Store and on the toolbar."
+  },
+  "appDescription": {
+    "message": "Real-time context & quota monitor for Claude.ai — see usage live and get smart alerts before your replies are cut off.",
+    "description": "Short description shown in the Chrome Web Store."
+  },
+  "appActionTitle": {
+    "message": "Token Monitor",
+    "description": "Tooltip when hovering the toolbar icon."
+  }
+}

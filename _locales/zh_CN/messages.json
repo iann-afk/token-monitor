@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "Token 监控 — AI 上下文追踪器",
+    "description": "Chrome 网上应用店和工具栏上显示的扩展名称。"
+  },
+  "appDescription": {
+    "message": "面向 AI 聊天工具的实时上下文与配额监控 — 实时显示用量，并在回复被截断之前给出智能提醒。",
+    "description": "Chrome 网上应用店的简短描述。"
+  },
+  "appActionTitle": {
+    "message": "Token 监控",
+    "description": "鼠标悬停工具栏图标时的提示。"
+  }
+}
