@@ -1,6 +1,10 @@
-# Token Monitor v2
+# Token Monitor
 
 A Chrome extension that gives Claude.ai users real-time visibility into:
+
+[![Chrome Web Store](https://img.shields.io/badge/Install-Chrome%20Web%20Store-4285F4?logo=googlechrome)](https://chromewebstore.google.com/detail/token-monitor-%E2%80%94-ai-contex/nhdncpkcgffiekmegejdljkfbkelhkoa)
+
+> Real-time context & quota tracker for Claude. See exactly how much AI you have left — before you hit the wall.
 
 - **Context window** — how full the current chat is
 - **5-hour window** — your rolling Pro/Max budget
