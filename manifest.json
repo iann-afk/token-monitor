@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "version": "2.2.0",
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "scripting",
+    "tabs",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://claude.ai/*",
+    "*://*.claude.ai/*",
+    "*://status.anthropic.com/*",
+    "https://raw.githubusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://claude.ai/*",
+        "*://*.claude.ai/*"
+      ],
+      "all_frames": false,
+      "run_at": "document_idle",
+      "js": [
+        "i18n/locales.js",
+        "utils/dom.js",
+        "utils/remote-config.js",
+        "utils/tokenizer.js",
+        "platforms/claude.js",
+        "dispatcher.js",
+        "ui/overlay.js",
+        "ui/source-breakdown.js",
+        "ui/handoff-modal.js",
+        "ui/savings-card.js",
+        "ui/composer-companion.js",
+        "ui/turn-badges.js",
+        "ui/stream-status-bar.js",
+        "ui/onboarding.js",
+        "utils/sound.js",
+        "content.js"
+      ],
+      "css": [
+        "ui/overlay.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_appActionTitle__",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/icon16.png",
+        "icons/icon32.png",
+        "icons/icon48.png",
+        "icons/icon128.png"
+      ],
+      "matches": [
+        "*://claude.ai/*",
+        "*://*.claude.ai/*"
+      ]
+    }
+  ]
+}

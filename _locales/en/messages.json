@@ -1,0 +1,78 @@
+{
+  "appName": {
+    "message": "Claude Context Window & Usage Tracker — Recall",
+    "description": "Extension name shown in the Chrome Web Store and on the toolbar."
+  },
+  "appDescription": {
+    "message": "Real-time context & quota monitor for Claude.ai — see usage live and get smart alerts before your replies are cut off.",
+    "description": "Short description shown in the Chrome Web Store."
+  },
+  "appActionTitle": {
+    "message": "Recall",
+    "description": "Tooltip when hovering the toolbar icon."
+  },
+  "breakdown_history": {
+    "message": "Conversation",
+    "description": "Token source: conversation history"
+  },
+  "breakdown_history_tip": {
+    "message": "All previous messages. Grows with every turn — starting a new chat resets this.",
+    "description": "Tooltip for conversation history row"
+  },
+  "breakdown_files": {
+    "message": "Uploaded files",
+    "description": "Token source: file attachments"
+  },
+  "breakdown_files_tip": {
+    "message": "PDFs, images, and documents you uploaded. Each costs tokens on every turn.",
+    "description": "Tooltip for files row"
+  },
+  "breakdown_project": {
+    "message": "Project knowledge",
+    "description": "Token source: project files"
+  },
+  "breakdown_project_tip": {
+    "message": "Files stored in your Project. Loaded every session — keep it lean.",
+    "description": "Tooltip for project knowledge row"
+  },
+  "breakdown_tools": {
+    "message": "Tools & connectors",
+    "description": "Token source: tools overhead"
+  },
+  "breakdown_tools_tip": {
+    "message": "Web search, code execution, MCP connectors. Each enabled tool adds overhead per turn.",
+    "description": "Tooltip for tools row"
+  },
+  "breakdown_system": {
+    "message": "System prompt",
+    "description": "Token source: system prompt"
+  },
+  "breakdown_system_tip": {
+    "message": "Claude's built-in instructions. Fixed cost, cannot be reduced.",
+    "description": "Tooltip for system prompt row"
+  },
+  "savings_title": {
+    "message": "~{pct}% savings available",
+    "description": "Savings card headline"
+  },
+  "savings_sub": {
+    "message": "Conversation history uses {pct}% of context. A fresh chat with a summary saves quota.",
+    "description": "Savings card body"
+  },
+  "savings_cta": {
+    "message": "Summarize & copy",
+    "description": "Savings card primary button"
+  },
+  "savings_dismiss": {
+    "message": "Dismiss",
+    "description": "Savings card dismiss button"
+  },
+  "savings_done_title": {
+    "message": "Summary copied!",
+    "description": "Savings card after summary is copied"
+  },
+  "savings_done_sub": {
+    "message": "Paste it in a new chat to continue seamlessly.",
+    "description": "Savings card after summary is copied"
+  }
+}

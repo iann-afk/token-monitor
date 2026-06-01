@@ -1,0 +1,78 @@
+{
+  "appName": {
+    "message": "Recall — AI 上下文追踪器",
+    "description": "Chrome 网上应用店和工具栏上显示的扩展名称。"
+  },
+  "appDescription": {
+    "message": "面向 AI 聊天工具的实时上下文与配额监控 — 实时显示用量，并在回复被截断之前给出智能提醒。",
+    "description": "Chrome 网上应用店的简短描述。"
+  },
+  "appActionTitle": {
+    "message": "Recall",
+    "description": "鼠标悬停工具栏图标时的提示。"
+  },
+  "breakdown_history": {
+    "message": "对话历史",
+    "description": "Token 来源：对话历史"
+  },
+  "breakdown_history_tip": {
+    "message": "所有历史消息。每轮对话都会增加——新建对话可重置。",
+    "description": "对话历史行的提示"
+  },
+  "breakdown_files": {
+    "message": "上传文件",
+    "description": "Token 来源：上传的附件"
+  },
+  "breakdown_files_tip": {
+    "message": "你上传的 PDF、图片和文档。每轮对话都会计费。",
+    "description": "文件行的提示"
+  },
+  "breakdown_project": {
+    "message": "项目知识",
+    "description": "Token 来源：项目文件"
+  },
+  "breakdown_project_tip": {
+    "message": "存储在 Project 中的文件，每次会话都会加载——保持精简以节省 token。",
+    "description": "项目知识行的提示"
+  },
+  "breakdown_tools": {
+    "message": "工具与连接器",
+    "description": "Token 来源：工具调用开销"
+  },
+  "breakdown_tools_tip": {
+    "message": "网络搜索、代码执行、MCP 连接器。每个启用的工具每轮都会增加开销。",
+    "description": "工具行的提示"
+  },
+  "breakdown_system": {
+    "message": "系统提示",
+    "description": "Token 来源：系统提示"
+  },
+  "breakdown_system_tip": {
+    "message": "Claude 的内置指令，固定消耗，无法减少。",
+    "description": "系统提示行的提示"
+  },
+  "savings_title": {
+    "message": "可节省约 {pct}% token",
+    "description": "省量卡片标题"
+  },
+  "savings_sub": {
+    "message": "对话历史占用 {pct}%。新建对话并粘贴摘要可大幅降低消耗。",
+    "description": "省量卡片正文"
+  },
+  "savings_cta": {
+    "message": "生成摘要并复制",
+    "description": "省量卡片主按钮"
+  },
+  "savings_dismiss": {
+    "message": "忽略",
+    "description": "省量卡片忽略按钮"
+  },
+  "savings_done_title": {
+    "message": "摘要已复制到剪贴板",
+    "description": "摘要生成成功后的标题"
+  },
+  "savings_done_sub": {
+    "message": "在新对话中粘贴即可无缝继续。",
+    "description": "摘要生成成功后的说明"
+  }
+}

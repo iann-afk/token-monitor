@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "_comment": "Upload this file to your CDN. It is NOT bundled into the extension.",
+
+  "selectors": {
+    "modelSelector": [
+      "[data-testid=\"model-selector-dropdown\"] button",
+      "button[data-testid*=\"model\"]",
+      "button[data-testid*=\"Model\"]",
+      "[data-testid=\"model-selector-dropdown\"]",
+      "header button[aria-haspopup=\"menu\"]",
+      "main button[aria-haspopup=\"menu\"]",
+      "[aria-haspopup=\"listbox\"][role=\"combobox\"]",
+      "button[aria-haspopup=\"menu\"]"
+    ],
+    "userMessage": [
+      "[data-testid=\"user-message\"]",
+      "[class*=\"font-user-message\"]",
+      "div[data-test-render-count] [class*=\"font-user-message\"]",
+      "[data-testid*=\"user\"][data-testid*=\"message\"]"
+    ],
+    "assistantMessage": [
+      "[class*=\"font-claude-response\"]",
+      "[data-testid=\"assistant-message\"]",
+      "[class*=\"font-claude-message\"]",
+      "div[data-test-render-count] [class*=\"font-claude-message\"]",
+      "[data-testid*=\"assistant\"][data-testid*=\"message\"]"
+    ]
+  },
+
+  "models": {
+    "sonnet-4-7": { "id": "claude-sonnet-4-7", "displayName": "Sonnet 4.7", "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 1.0 },
+    "sonnet-4-6": { "id": "claude-sonnet-4-6", "displayName": "Sonnet 4.6", "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 1.0 },
+    "opus-4-8":   { "id": "claude-opus-4-8",   "displayName": "Opus 4.8",   "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 5.0 },
+    "opus-4-7":   { "id": "claude-opus-4-7",   "displayName": "Opus 4.7",   "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 5.0 },
+    "opus-4-6":   { "id": "claude-opus-4-6",   "displayName": "Opus 4.6",   "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 5.0 },
+    "haiku-4-5":  { "id": "claude-haiku-4-5",  "displayName": "Haiku 4.5",  "contextWindow": 200000, "maxOutputTokens": 32000, "burnRateMultiplier": 0.2 }
+  }
+}
